@@ -23,6 +23,8 @@ source =
     "source/organism/*.coffee"]
   stylus: [
     "source/style/*.styl"]
+  yml: [
+    "source/organism/*.yml"]
 
 atoms =
   js: [
@@ -64,6 +66,11 @@ gulp.task "coffee", ->
     .pipe gulp.dest "#{path.assets}/js"
     .pipe connect.reload()
 
+gulp.task "yml", ->
+  gulp.src(source.yml)
+    .pipe(yml().on("error", gutil.log))
+    .pipe(gulp.dest( "#{path.assets}/scaffold"))
+
 gulp.task "stylus", ->
   gulp.src source.stylus
     .pipe concat "atoms.studio.styl"
@@ -74,9 +81,10 @@ gulp.task "stylus", ->
     .pipe gulp.dest "#{path.assets}/css"
     .pipe connect.reload()
 
-gulp.task "init", ["atoms", "coffee", "stylus"]
+gulp.task "init", ["atoms", "coffee", "stylus", "yml"]
 
 gulp.task "default", ->
   gulp.run ["webserver"]
   gulp.watch source.coffee, ["coffee"]
   gulp.watch source.stylus, ["stylus"]
+  gulp.watch source.yml, ["yml"]

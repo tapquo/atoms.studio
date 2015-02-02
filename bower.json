@@ -19,6 +19,7 @@
         "atoms-app-calendar"        : "*",
         "atoms-app-inputrange"      : "*",
         "atoms-app-table"           : "*",
-        "atoms-app-crud"            : "*"
+        "atoms-app-crud"            : "*",
+        "flexo"                     : "*"
     }
 }

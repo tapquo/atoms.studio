@@ -1,0 +1,18 @@
+[data-organism-article="chapter"]
+  [data-organism-section]
+    display: flex !important
+    flex-direction row
+
+
+    #doc, [data-atom-textarea]
+      width: inherit !important
+      padding: U
+      border-right: solid 1px darken(BACKGROUND, 5%)
+    #doc
+      flex-grow(2)
+    [data-atom-textarea]
+      flex-grow(1)
+
+    #canvas
+      min-width: 360px
+      max-width: 360px
