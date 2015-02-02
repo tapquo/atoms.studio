@@ -1,0 +1,28 @@
+{
+  "name": "atoms",
+  "version": "0.02.02",
+  "description": "Atoms Studio.",
+  "homepage": "http://atoms.tapquo.com",
+  "author": {
+    "name": "Tapquo S.L.",
+    "site": "http://tapquo.com"
+  },
+  "scripts": {
+    "test": "gulp test"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "coffee-script": "^1.9.0"
+  },
+  "devDependencies": {
+    "gulp"                     : "^3.8.8",
+    "gulp-coffee"              : "*",
+    "gulp-concat"              : "*",
+    "gulp-connect"             : "*",
+    "gulp-header"              : "*",
+    "gulp-stylus"              : "*",
+    "gulp-uglify"              : "*",
+    "gulp-util"                : "*",
+    "gulp-yml"                 : "*"
+  }
+}
