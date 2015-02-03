@@ -3,7 +3,7 @@
   > *
     background-color                    : transparent !important
 
-  [data-organism-header]
+  > [data-organism-header]
     height                              : HEIGHT = (4 * U) !important
     padding                             : 0 (U / 2) !important
     box-shadow                          : 0 1px BACKGROUND_STUDIO !important
@@ -26,16 +26,16 @@
         font-weight                     : FONT_WEIGHT_BOLD !important
         color                           : WHITE
 
-  [data-organism-section]
+  > [data-organism-section]
     display                             : flex !important
     flex-direction                        row
-    #doc, [data-atom-editor]
+    > #doc, > [data-atom-editor]
       border-right                      : solid 1px BACKGROUND_STUDIO
-    #doc
+    > #doc
       flex-grow(2)
       padding                           : U
       width                             : 40%
-    [data-atom-editor]
+    > [data-atom-editor]
       flex-grow(3)
       font-family                       : courier
       font-size                         : 13px
@@ -43,7 +43,7 @@
       .CodeMirror
         height                          : inherit
         background-color                : lighten(BACKGROUND_STUDIO, 95%)
-    #canvas
+    > #canvas
       flex-grow(0)
       display-flex()
       flex-direction row

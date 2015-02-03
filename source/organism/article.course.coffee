@@ -13,10 +13,10 @@ class Atoms.Organism.Chapter extends Atoms.Organism.Article
     do @render
 
   # -- Children Bubble Events --------------------------------------------------
-  onEditorChange: (atom) ->
-    console.log "onEditorChange", atom.value()
+  onEditorChange: (editor) ->
+    @section.canvas.app.value editor.value()
 
-  onEditorError: (atom) ->
+  onEditorError: ->
     console.log "onEditorError"
 
 new Atoms.Organism.Chapter()
