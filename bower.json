@@ -1,25 +1,26 @@
 {
-    "name": "atoms.ide",
-    "ignore": [
-            "**/.*",
-            "node_modules",
-            "bower_components",
-            "test",
-            "tests"
-    ],
-    "dependencies": {
-        "hope"                      : "*",
-        "atoms"                     : "*",
-        "atoms-icons"               : "*",
-        "atoms-app-gmaps"           : "*",
-        "atoms-app-carousel"        : "*",
-        "atoms-app-theme"           : "*",
-        "atoms-app-appnima-payment" : "*",
-        "atoms-app-leaflet"         : "*",
-        "atoms-app-calendar"        : "*",
-        "atoms-app-inputrange"      : "*",
-        "atoms-app-table"           : "*",
-        "atoms-app-crud"            : "*",
-        "flexo"                     : "*"
-    }
+  "name": "atoms.ide",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "hope": "*",
+    "atoms": "*",
+    "atoms-icons": "*",
+    "atoms-app-gmaps": "*",
+    "atoms-app-carousel": "*",
+    "atoms-app-theme": "*",
+    "atoms-app-appnima-payment": "*",
+    "atoms-app-leaflet": "*",
+    "atoms-app-calendar": "*",
+    "atoms-app-inputrange": "*",
+    "atoms-app-table": "*",
+    "atoms-app-crud": "*",
+    "codemirror": "~4.12.0",
+    "flexo": "*"
+  }
 }

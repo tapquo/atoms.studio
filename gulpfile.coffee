@@ -26,12 +26,20 @@ source =
   yml: [
     "source/organism/*.yml"]
 
-atoms =
-  js: [
-    "bower_components/atoms/atoms.js"
-    "bower_components/atoms/atoms.app.js"]
-  css: [
-    "bower_components/atoms/atoms.app.css"]
+dependencies =
+  atoms:
+    js: [
+      "bower_components/atoms/atoms.js"
+      "bower_components/atoms/atoms.app.js"]
+    css: [
+      "bower_components/atoms/atoms.app.css"]
+  codemirror:
+    js: [
+      "bower_components/codemirror/lib/codemirror.js"
+      "bower_components/codemirror/mode/coffeescript.js"
+      "bower_components/codemirror/mode/yaml.js"]
+    css: [
+      "bower_components/codemirror/lib/codemirror.css"]
 
 banner = [
   "/**"
@@ -49,12 +57,21 @@ gulp.task "webserver", ->
     port      : 8080
     livereload: true
 
-gulp.task "atoms", ->
-  gulp.src atoms.js
+gulp.task "dependencies", ->
+  # -- Atoms
+  gulp.src dependencies.atoms.js
     .pipe concat "#{pkg.name}.js"
     .pipe gulp.dest "#{path.assets}/js"
-  gulp.src atoms.css
+  gulp.src dependencies.atoms.css
     .pipe concat "#{pkg.name}.css"
+    .pipe gulp.dest "#{path.assets}/css"
+  # -- Codemirror
+  gulp.src dependencies.codemirror.js
+    .pipe concat "codemirror.js"
+    .pipe uglify mangle: false
+    .pipe gulp.dest "#{path.assets}/js"
+  gulp.src dependencies.codemirror.css
+    .pipe concat "codemirror.css"
     .pipe gulp.dest "#{path.assets}/css"
 
 gulp.task "coffee", ->
@@ -81,7 +98,7 @@ gulp.task "stylus", ->
     .pipe gulp.dest "#{path.assets}/css"
     .pipe connect.reload()
 
-gulp.task "init", ["atoms", "coffee", "stylus", "yml"]
+gulp.task "init", ["dependencies", "coffee", "stylus", "yml"]
 
 gulp.task "default", ->
   gulp.run ["webserver"]

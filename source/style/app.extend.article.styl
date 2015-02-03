@@ -2,28 +2,30 @@
   background-color                      : WHITE !important
   > *
     background-color                    : transparent !important
+
   [data-organism-header]
     height                              : HEIGHT = (4 * U) !important
     line-height                         : HEIGHT
     box-shadow                          : 0 1px darken(BACKGROUND, 5%) !important
     [data-atom-heading]
       color                             : DARK !important
+
   [data-organism-section]
     display                             : flex !important
     flex-direction                        row
-    #doc, [data-atom-textarea]
+    #doc, [data-atom-editor]
       width                             : inherit !important
       max-width                         : 35%
-      padding                           : U
       border-right                      : solid 1px darken(BACKGROUND, 5%)
     #doc
       flex-grow(2)
-    [data-atom-textarea]
+      padding                           : U
+    [data-atom-editor]
       flex-grow(2)
       font-family                       : courier
       font-size                         : 13px
-      background-color                  : BACKGROUND
-
+      .CodeMirror
+        height                          : 100%
     #canvas
       display-flex()
       flex-direction row

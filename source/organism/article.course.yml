@@ -25,9 +25,9 @@ children:
             id: doc
             children:
               - Atom.Text:
-                  value: Welcome to Learn Ractive.js. This is a set of interactive tutorials which you can take at your own pace. Each tutorial consists of a number of steps – you're currently on step 1 of the 'Hello world!' tutorial.
-        - Atom.Code:
-            id: code
+                  value: Welcome to Learn Atoms.js. This is a set of interactive tutorials which you can take at your own pace. Each tutorial consists of a number of steps – you're currently on step 1 of the 'Hello world!' tutorial.
+        - Atom.Editor:
+            id: editor
         - Molecule.Div:
             id: canvas
             children:

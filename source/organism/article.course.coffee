@@ -1,8 +1,7 @@
 "use strict"
 
 # -- Extend common attributes --------------------------------------------------
-Atoms.Organism.Section.available.push "Atom.Code"
-Atoms.Organism.Section.available.push "Atom.Textarea"
+Atoms.Organism.Section.available.push "Atom.Editor"
 # ------------------------------------------------------------------------------
 
 class Atoms.Organism.Chapter extends Atoms.Organism.Article
