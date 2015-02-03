@@ -21,6 +21,7 @@
     "atoms-app-table": "*",
     "atoms-app-crud": "*",
     "codemirror": "~4.12.0",
-    "flexo": "*"
+    "flexo": "*",
+    "js-yaml": "~3.2.5"
   }
 }

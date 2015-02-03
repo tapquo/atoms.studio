@@ -29,6 +29,7 @@ source =
 dependencies =
   atoms:
     js: [
+      "bower_components/js-yaml/dist/js-yaml.min.js"
       "bower_components/atoms/atoms.js"
       "bower_components/atoms/atoms.app.js"]
     css: [
@@ -39,7 +40,8 @@ dependencies =
       "bower_components/codemirror/mode/coffeescript.js"
       "bower_components/codemirror/mode/yaml.js"]
     css: [
-      "bower_components/codemirror/lib/codemirror.css"]
+      "bower_components/codemirror/lib/codemirror.css"
+      "bower_components/codemirror/theme/monokai.css"]
 
 banner = [
   "/**"

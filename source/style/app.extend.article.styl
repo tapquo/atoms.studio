@@ -5,43 +5,60 @@
 
   [data-organism-header]
     height                              : HEIGHT = (4 * U) !important
-    line-height                         : HEIGHT
-    box-shadow                          : 0 1px darken(BACKGROUND, 5%) !important
+    padding                             : 0 (U / 2) !important
+    box-shadow                          : 0 1px BACKGROUND_STUDIO !important
+    > *
+      height                            : HEIGHT
+      line-height                       : HEIGHT
+
     [data-atom-heading]
       color                             : DARK !important
+
+    [data-atom-button]
+      height                            : HEIGHT = ( 2 * U)
+      margin-top                        : U
+      margin-left                       : U
+      padding                           : 0 (1 * U)
+      line-height                       : HEIGHT
+      background-color                  : darken(BACKGROUND_STUDIO, 10%)
+      border-radius                     : BORDER_RADIUS
+      abbr
+        font-weight                     : FONT_WEIGHT_BOLD !important
+        color                           : WHITE
 
   [data-organism-section]
     display                             : flex !important
     flex-direction                        row
     #doc, [data-atom-editor]
-      width                             : inherit !important
-      max-width                         : 35%
-      border-right                      : solid 1px darken(BACKGROUND, 5%)
+      border-right                      : solid 1px BACKGROUND_STUDIO
     #doc
       flex-grow(2)
       padding                           : U
+      width                             : 40%
     [data-atom-editor]
-      flex-grow(2)
+      flex-grow(3)
       font-family                       : courier
       font-size                         : 13px
+      width                             : 50%
       .CodeMirror
-        height                          : 100%
+        height                          : inherit
+        background-color                : lighten(BACKGROUND_STUDIO, 95%)
     #canvas
+      flex-grow(0)
       display-flex()
       flex-direction row
       justify-content center
       align-content center
       align-items center
-      // flex-grow(1)
       width                             : WIDTH = 360px !important
       max-width                         : WIDTH
+      min-width                         : WIDTH
       > [data-atom-app]
-        min-width                       : WIDTH = 320px
-        max-width                       : WIDTH
-        max-height                      : HEIGHT = 568px
-        min-height                      : HEIGHT
+        margin                          : 10px
+        width                           : 320px
+        height                          : 568px
         background-color                : DARK
-        border                          : solid (U / 1.25) darken(DARK, 25%)
+        border                          : solid 10px darken(DARK, 25%)
         border-radius                   : U
         border-top-width                : (3 * U)
         border-bottom-width             : (4 * U)

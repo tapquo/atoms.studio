@@ -11,12 +11,18 @@ children:
         - Molecule.Navigation:
             style: right
             children:
+              - Atom.Button:
+                  text: Reset
+              - Atom.Button:
+                  text: Run
+
+        - Molecule.Navigation:
+            style: right
+            children:
               - Atom.Link:
                   text: 1
               - Atom.Link:
                   text: 2
-              - Atom.Button:
-                  text: Reset
 
   - Organism.Section:
       id: section
@@ -28,6 +34,9 @@ children:
                   value: Welcome to Learn Atoms.js. This is a set of interactive tutorials which you can take at your own pace. Each tutorial consists of a number of steps – you're currently on step 1 of the 'Hello world!' tutorial.
         - Atom.Editor:
             id: editor
+            events:
+              - change
+              - error
         - Molecule.Div:
             id: canvas
             children:
