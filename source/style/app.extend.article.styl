@@ -1,18 +1,45 @@
 [data-organism-article="chapter"]
+  background-color                      : WHITE !important
+  > *
+    background-color                    : transparent !important
+  [data-organism-header]
+    height                              : HEIGHT = (4 * U) !important
+    line-height                         : HEIGHT
+    box-shadow                          : 0 1px darken(BACKGROUND, 5%) !important
+    [data-atom-heading]
+      color                             : DARK !important
   [data-organism-section]
-    display: flex !important
-    flex-direction row
-
-
+    display                             : flex !important
+    flex-direction                        row
     #doc, [data-atom-textarea]
-      width: inherit !important
-      padding: U
-      border-right: solid 1px darken(BACKGROUND, 5%)
+      width                             : inherit !important
+      max-width                         : 35%
+      padding                           : U
+      border-right                      : solid 1px darken(BACKGROUND, 5%)
     #doc
       flex-grow(2)
     [data-atom-textarea]
-      flex-grow(1)
+      flex-grow(2)
+      font-family                       : courier
+      font-size                         : 13px
+      background-color                  : BACKGROUND
 
     #canvas
-      min-width: 360px
-      max-width: 360px
+      display-flex()
+      flex-direction row
+      justify-content center
+      align-content center
+      align-items center
+      // flex-grow(1)
+      width                             : WIDTH = 360px !important
+      max-width                         : WIDTH
+      > [data-atom-app]
+        min-width                       : WIDTH = 320px
+        max-width                       : WIDTH
+        max-height                      : HEIGHT = 568px
+        min-height                      : HEIGHT
+        background-color                : DARK
+        border                          : solid (U / 1.25) darken(DARK, 25%)
+        border-radius                   : U
+        border-top-width                : (3 * U)
+        border-bottom-width             : (4 * U)
