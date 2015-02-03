@@ -33,7 +33,8 @@ dependencies =
       "bower_components/atoms/atoms.js"
       "bower_components/atoms/atoms.app.js"]
     css: [
-      "bower_components/atoms/atoms.app.css"]
+      "bower_components/atoms/atoms.app.css"
+      "bower_components/atoms.icons/atoms.icons.css"]
   codemirror:
     js: [
       "bower_components/codemirror/lib/codemirror.js"

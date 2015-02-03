@@ -22,7 +22,7 @@ class Atoms.Atom.Editor extends Atoms.Class.Atom
 
         - Organism.Section:
             id: section
-            style: active
+            style: active padding
             children:
               - Molecule.Div:
                   id: doc
@@ -31,8 +31,9 @@ class Atoms.Atom.Editor extends Atoms.Class.Atom
                         value: Welcome to Learn Atoms.js.
 
               - Atom.Button:
-                  style: fluid
-                  text: sss
+                  style: fluid big
+                  text: accept
+                  icon: user
     """
 
     Atoms.$ =>
@@ -50,6 +51,8 @@ class Atoms.Atom.Editor extends Atoms.Class.Atom
           @bubble "change", @
         catch e
           @bubble "error", @
+
+      @bubble "change", @
 
   value: (value) ->
     if value
