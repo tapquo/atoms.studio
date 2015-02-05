@@ -52,3 +52,77 @@ tutorials:
                         text: 10
     code       : >
       {"id":"chapters","style":"active","children":[{"Organism.Section":{"children":[{"Molecule.Navigation":{"children":[{"Atom.Button":{"icon":"menu","callbacks":["onMenu"]}}]}},{"Molecule.Navigation":{"events":["select"],"callbacks":["onChapter"],"children":[{"Atom.Button":{"text":1}},{"Atom.Button":{"text":2}},{"Atom.Button":{"text":3}},{"Atom.Button":{"text":4}},{"Atom.Button":{"text":5}},{"Atom.Button":{"text":6}},{"Atom.Button":{"text":7}},{"Atom.Button":{"text":8}},{"Atom.Button":{"text":9}},{"Atom.Button":{"text":10}}]}}]}}]}
+
+  - chapter    : 2
+    subchapter : 2.1
+    title      : Formularios
+    readme     : assets/documentation/2-1.md
+    yaml       : >
+      children:
+        - Organism.Header:
+            children:
+              - Atom.Heading:
+                  size: h1
+                  value: Form
+              - Molecule.Navigation:
+                  children:
+                    - Atom.Button:
+                        events:
+                          - touch
+                        icon: back
+                        path: back
+                  style: left
+        - Molecule.Navigation:
+            children:
+              - Atom.Button:
+                  events:
+                    - touch
+                  text: Settings
+              - Atom.Button:
+                  events:
+                    - touch
+                  text: Profile
+        - Organism.Section:
+            children:
+              - Molecule.Form:
+                  children:
+                    - Atom.Label:
+                        value: "Normal Inputs:"
+                    - Atom.Input:
+                        type: text
+                        name: username
+                        placeholder: Username...
+                        style: inline
+                    - Atom.Input:
+                        type: password
+                        style: inline
+                        name: password
+                        value: "12345678"
+                        required: "true"
+                    - Atom.Textarea:
+                        placeholder: Bio
+                        maxlength: "140"
+                    - Atom.Label:
+                        value: "Birth:"
+                    - Atom.Input:
+                        type: date
+                        name: birth
+                    - Atom.Button:
+                        events:
+                          - touch
+                        icon: diskette
+                        style: fluid accept
+                    - Atom.Button:
+                        events:
+                          - touch
+                        icon: trash
+                        style: fluid cancel
+                  events:
+                    - submit
+            style: padding
+            id: profile
+      id: form
+
+
+    code       : >
+      {"children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Form"}},{"Molecule.Navigation":{"children":[{"Atom.Button":{"events":["touch"],"icon":"back","path":"back"}}],"style":"left"}}]}},{"Molecule.Navigation":{"children":[{"Atom.Button":{"events":["touch"],"text":"Settings"}},{"Atom.Button":{"events":["touch"],"text":"Profile"}}]}},{"Organism.Section":{"children":[{"Molecule.Form":{"children":[{"Atom.Label":{"value":"Normal Inputs:"}},{"Atom.Input":{"type":"text","name":"username","placeholder":"Username...","style":"inline"}},{"Atom.Input":{"type":"password","style":"inline","name":"password","value":"12345678","required":"true"}},{"Atom.Textarea":{"placeholder":"Bio","maxlength":"140"}},{"Atom.Label":{"value":"Birth:"}},{"Atom.Input":{"type":"date","name":"birth"}},{"Atom.Button":{"events":["touch"],"icon":"diskette","style":"fluid accept"}},{"Atom.Button":{"events":["touch"],"icon":"trash","style":"fluid cancel"}}],"events":["submit"]}}],"style":"padding","id":"profile"}}],"id":"form"}
