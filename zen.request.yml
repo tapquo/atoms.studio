@@ -122,7 +122,50 @@ tutorials:
             style: padding
             id: profile
       id: form
-
-
     code       : >
       {"children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Form"}},{"Molecule.Navigation":{"children":[{"Atom.Button":{"events":["touch"],"icon":"back","path":"back"}}],"style":"left"}}]}},{"Molecule.Navigation":{"children":[{"Atom.Button":{"events":["touch"],"text":"Settings"}},{"Atom.Button":{"events":["touch"],"text":"Profile"}}]}},{"Organism.Section":{"children":[{"Molecule.Form":{"children":[{"Atom.Label":{"value":"Normal Inputs:"}},{"Atom.Input":{"type":"text","name":"username","placeholder":"Username...","style":"inline"}},{"Atom.Input":{"type":"password","style":"inline","name":"password","value":"12345678","required":"true"}},{"Atom.Textarea":{"placeholder":"Bio","maxlength":"140"}},{"Atom.Label":{"value":"Birth:"}},{"Atom.Input":{"type":"date","name":"birth"}},{"Atom.Button":{"events":["touch"],"icon":"diskette","style":"fluid accept"}},{"Atom.Button":{"events":["touch"],"icon":"trash","style":"fluid cancel"}}],"events":["submit"]}}],"style":"padding","id":"profile"}}],"id":"form"}
+
+
+  - chapter    : 2
+    subchapter : 2.1
+    title      : Formularios
+    readme     : assets/documentation/2-1.md
+    yaml       : >
+      children:
+        - Organism.Header:
+            children:
+              - Atom.Heading:
+                  size: h1
+                  value: Lists
+        - Organism.Section:
+            children:
+              - Molecule.Search:
+                  children: []
+                  events:
+                    - submit
+              - Molecule.List:
+                  children:
+                    - Atom.Li:
+                        image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/06072011134639_ageratum-houstonianum-blue-194172.jpg&width=480&height=300"
+                        text: Agerato celestino
+                        description: "Hay que plantarla a pleno sol, aunque en climas calurosos también puede estar en semisombra. "
+                        info: 0°C
+                    - Atom.Li:
+                        image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_002.jpg"
+                        text: "Calendaria 'Millas'"
+                        description: "Planta anual. Precisa riego moderado.. Mes de floración: VI-VIII"
+                        info: < -1°C
+                    - Atom.Li:
+                        image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_017.jpg"
+                        description: "Planta anual. Precisa riego moderado. Mes de floración: V-IX"
+                        text: Cresta de gallo
+                        info: 0°C
+                    - Atom.Li:
+                        description: "Necesita un lugar a pleno sol y un suelo neutro, rico y húmedo, pero con buen drenaje. "
+                        image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/01092011133929_helianthus-annuus-abendsonne-14002115.jpg"
+                        text: Girasol
+                        info: < -1°C
+            id: list
+      id: form
+    code       : >
+      {"children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Lists"}}]}},{"Organism.Section":{"children":[{"Molecule.Search":{"children":[],"events":["submit"]}},{"Molecule.List":{"children":[{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/06072011134639_ageratum-houstonianum-blue-194172.jpg&width=480&height=300","text":"Agerato celestino","description":"Hay que plantarla a pleno sol, aunque en climas calurosos también puede estar en semisombra. ","info":"0°C"}},{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_002.jpg","text":"Calendaria 'Millas'","description":"Planta anual. Precisa riego moderado.. Mes de floración: VI-VIII","info":"< -1°C"}},{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_017.jpg","description":"Planta anual. Precisa riego moderado. Mes de floración: V-IX","text":"Cresta de gallo","info":"0°C"}},{"Atom.Li":{"description":"Necesita un lugar a pleno sol y un suelo neutro, rico y húmedo, pero con buen drenaje. ","image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/01092011133929_helianthus-annuus-abendsonne-14002115.jpg","text":"Girasol","info":"< -1°C"}}]}}],"id":"list"}}],"id":"form"}
