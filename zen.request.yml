@@ -58,72 +58,82 @@ tutorials:
     title      : Formularios
     readme     : assets/documentation/2-1.md
     yaml       : >
+      id: form
       children:
-        - Organism.Header:
-            children:
-              - Atom.Heading:
-                  size: h1
-                  value: Form
-              - Molecule.Navigation:
-                  children:
-                    - Atom.Button:
-                        events:
-                          - touch
-                        icon: back
-                        path: back
-                  style: left
-        - Molecule.Navigation:
-            children:
-              - Atom.Button:
-                  events:
-                    - touch
-                  text: Settings
-              - Atom.Button:
-                  events:
-                    - touch
-                  text: Profile
         - Organism.Section:
+            style: padding
+            id: info
             children:
               - Molecule.Form:
+                  events:
+                    - submit
                   children:
-                    - Atom.Label:
-                        value: "Normal Inputs:"
+                    - Atom.label:
+                        value: Personal Information
+                        style: margin-bottom
                     - Atom.Input:
                         type: text
-                        name: username
-                        placeholder: Username...
-                        style: inline
+                        placeholder: Your name...
+                        style: big
                     - Atom.Input:
-                        type: password
-                        style: inline
-                        name: password
-                        value: "12345678"
+                        type: number
+                        name: phone
+                        placeholder: Your phone number...
                         required: "true"
+                        style: big
                     - Atom.Textarea:
-                        placeholder: Bio
-                        maxlength: "140"
+                        name: address
+                        placeholder: Your address...
+                        style: small
                     - Atom.Label:
-                        value: "Birth:"
+                        value: Allergies
+                        style: margin-bottom
+                    - Atom.Select:
+                        name: allergies
+                        options:
+                          - label: select...
+                            value: 0
+                          - label: Pollen
+                            value: 1
+                          - label: Dust Mite
+                            value: 2
+                          - label: Mold
+                            value: 3
+                    - Atom.Label:
+                        value: Doctor
+                    - Atom.AutoComplete:
+                        placeholder: Name...
+                        name: doctor
+                        options:
+                          - label: Zaldua
+                            value: 1
+                          - label: Espinosa
+                            value: 2
+                          - label: Sainz
+                            value: 3
+                          - label: Perfecto
+                            value: 4
+                          - label: Allen
+                            value: 4
+                    - Atom.Label:
+                        value: Birth
                     - Atom.Input:
                         type: date
                         name: birth
                     - Atom.Button:
                         events:
                           - touch
+                        style: big accept fluid
                         icon: diskette
-                        style: fluid accept
+                        text: Save
                     - Atom.Button:
                         events:
                           - touch
+                        style: big cancel fluid
                         icon: trash
-                        style: fluid cancel
-                  events:
-                    - submit
-            style: padding
-            id: profile
-      id: form
+                        text: Cancel
     code       : >
-      {"children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Form"}},{"Molecule.Navigation":{"children":[{"Atom.Button":{"events":["touch"],"icon":"back","path":"back"}}],"style":"left"}}]}},{"Molecule.Navigation":{"children":[{"Atom.Button":{"events":["touch"],"text":"Settings"}},{"Atom.Button":{"events":["touch"],"text":"Profile"}}]}},{"Organism.Section":{"children":[{"Molecule.Form":{"children":[{"Atom.Label":{"value":"Normal Inputs:"}},{"Atom.Input":{"type":"text","name":"username","placeholder":"Username...","style":"inline"}},{"Atom.Input":{"type":"password","style":"inline","name":"password","value":"12345678","required":"true"}},{"Atom.Textarea":{"placeholder":"Bio","maxlength":"140"}},{"Atom.Label":{"value":"Birth:"}},{"Atom.Input":{"type":"date","name":"birth"}},{"Atom.Button":{"events":["touch"],"icon":"diskette","style":"fluid accept"}},{"Atom.Button":{"events":["touch"],"icon":"trash","style":"fluid cancel"}}],"events":["submit"]}}],"style":"padding","id":"profile"}}],"id":"form"}
+      {"id":"form","children":[{"Organism.Section":{"style":"padding","id":"info","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.label":{"value":"Personal Information","style":"margin-bottom"}},{"Atom.Input":{"type":"text","placeholder":"Your name...","style":"big"}},{"Atom.Input":{"type":"number","name":"phone","placeholder":"Your phone number...","required":"true","style":"big"}},{"Atom.Textarea":{"name":"address","placeholder":"Your address...","style":"small"}},{"Atom.Label":{"value":"Allergies","style":"margin-bottom"}},{"Atom.Select":{"name":"allergies","options":[{"label":"select...","value":0},{"label":"Pollen","value":1},{"label":"Dust Mite","value":2},{"label":"Mold","value":3}]}},{"Atom.Label":{"value":"Doctor"}},{"Atom.AutoComplete":{"placeholder":"Name...","name":"doctor","options":[{"label":"Zaldua","value":1},{"label":"Espinosa","value":2},{"label":"Sainz","value":3},{"label":"Perfecto","value":4},{"label":"Allen","value":4}]}},{"Atom.Label":{"value":"Birth"}},{"Atom.Input":{"type":"date","name":"birth"}},{"Atom.Button":{"events":["touch"],"style":"big accept fluid","icon":"diskette","text":"Save"}},{"Atom.Button":{"events":["touch"],"style":"big cancel fluid","icon":"trash","text":"Cancel"}}]}}]}}]}
 
   - chapter    : 3
     subchapter : 3.1
