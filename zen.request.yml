@@ -130,44 +130,61 @@ tutorials:
     title      : Listas
     readme     : assets/documentation/3-1.md
     yaml       : >
+      id: main
       children:
         - Organism.Header:
             children:
               - Atom.Heading:
                   size: h1
-                  value: Lists
+                  value: Listas
         - Organism.Section:
+            id: list
             children:
               - Molecule.Search:
-                  children: []
-                  events:
-                    - submit
+                  style: "margin-top"
               - Molecule.List:
+                  style: margin-top
                   children:
                     - Atom.Li:
-                        image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/06072011134639_ageratum-houstonianum-blue-194172.jpg&width=480&height=300"
-                        text: Agerato celestino
+                        image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/06072011134639_ageratum-houstonianum-blue-194172.jpg"
                         description: "Hay que plantarla a pleno sol, aunque en climas calurosos también puede estar en semisombra. "
+                        text: Agerato celestino
                         info: 0°C
                     - Atom.Li:
                         image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_002.jpg"
-                        text: "Calendaria 'Millas'"
+                        text: "Calendaria 'Millas"
                         description: "Planta anual. Precisa riego moderado.. Mes de floración: VI-VIII"
                         info: < -1°C
                     - Atom.Li:
+                        text: Cresta de gallo
                         image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_017.jpg"
                         description: "Planta anual. Precisa riego moderado. Mes de floración: V-IX"
-                        text: Cresta de gallo
                         info: 0°C
                     - Atom.Li:
-                        description: "Necesita un lugar a pleno sol y un suelo neutro, rico y húmedo, pero con buen drenaje. "
+                        description: "Necesita un lugar a pleno sol y un suelo neutro, rico y húmedo, pero con buen drenaje."
                         image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/01092011133929_helianthus-annuus-abendsonne-14002115.jpg"
                         text: Girasol
                         info: < -1°C
-            id: list
-      id: form
+              - Molecule.Div:
+                  children:
+                    - Atom.Label:
+                        value: Plantas del mes
+              - Molecule.List:
+                  children:
+                    - Atom.Li:
+                        text: Aurinia saxatilis
+                        description: Cestillo de oro
+                    - Atom.Li:
+                        text: Camellia japonica
+                        description: Arbusto o arbolillo de flores grandes
+                  bind:
+                    entity: __.Entity.Flowers
+                    atom: Atom.Li
+                    create : true
+                    update : true
+                    destroy: true
     code       : >
-      {"children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Lists"}}]}},{"Organism.Section":{"children":[{"Molecule.Search":{"children":[],"events":["submit"]}},{"Molecule.List":{"children":[{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/06072011134639_ageratum-houstonianum-blue-194172.jpg&width=480&height=300","text":"Agerato celestino","description":"Hay que plantarla a pleno sol, aunque en climas calurosos también puede estar en semisombra. ","info":"0°C"}},{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_002.jpg","text":"Calendaria 'Millas'","description":"Planta anual. Precisa riego moderado.. Mes de floración: VI-VIII","info":"< -1°C"}},{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_017.jpg","description":"Planta anual. Precisa riego moderado. Mes de floración: V-IX","text":"Cresta de gallo","info":"0°C"}},{"Atom.Li":{"description":"Necesita un lugar a pleno sol y un suelo neutro, rico y húmedo, pero con buen drenaje. ","image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/01092011133929_helianthus-annuus-abendsonne-14002115.jpg","text":"Girasol","info":"< -1°C"}}]}}],"id":"list"}}],"id":"form"}
+      {"id":"main","children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Listas"}}]}},{"Organism.Section":{"id":"list","children":[{"Molecule.Search":{"style":"margin-top"}},{"Molecule.List":{"style":"margin-top","children":[{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/06072011134639_ageratum-houstonianum-blue-194172.jpg","description":"Hay que plantarla a pleno sol, aunque en climas calurosos también puede estar en semisombra. ","text":"Agerato celestino","info":"0°C"}},{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_002.jpg","text":"Calendaria 'Millas","description":"Planta anual. Precisa riego moderado.. Mes de floración: VI-VIII","info":"< -1°C"}},{"Atom.Li":{"text":"Cresta de gallo","image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_017.jpg","description":"Planta anual. Precisa riego moderado. Mes de floración: V-IX","info":"0°C"}},{"Atom.Li":{"description":"Necesita un lugar a pleno sol y un suelo neutro, rico y húmedo, pero con buen drenaje.","image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/01092011133929_helianthus-annuus-abendsonne-14002115.jpg","text":"Girasol","info":"< -1°C"}}]}},{"Molecule.Div":{"children":[{"Atom.Label":{"value":"Plantas del mes"}}]}},{"Molecule.List":{"children":[{"Atom.Li":{"text":"Aurinia saxatilis","description":"Cestillo de oro"}},{"Atom.Li":{"text":"Camellia japonica","description":"Arbusto o arbolillo de flores grandes"}}],"bind":{"entity":"__.Entity.Flowers","atom":"Atom.Li","create":true,"update":true,"destroy":true}}}]}}]}
 
   - chapter    : 4
     subchapter : 4.1
