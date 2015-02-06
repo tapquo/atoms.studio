@@ -4,3 +4,4 @@ node_modules
 www/assets/css/*.css
 www/assets/js/*.js
 www/assets/scaffold/*
+environment/development.yml

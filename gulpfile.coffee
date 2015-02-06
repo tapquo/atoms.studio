@@ -29,7 +29,9 @@ source =
 dependencies =
   atoms:
     js: [
+      "bower_components/jquery/dist/jquery.min.js"
       "bower_components/js-yaml/dist/js-yaml.min.js"
+      "bower_components/hope/hope.js"
       "bower_components/atoms/atoms.js"
       "bower_components/atoms/atoms.app.js"]
     css: [
