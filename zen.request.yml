@@ -179,7 +179,7 @@ tutorials:
                         description: Arbusto o arbolillo de flores grandes
                   bind:
                     entity: __.Entity.Flowers
-                    atom: Atom.Li
+                    atom   : Atom.Li
                     create : true
                     update : true
                     destroy: true
