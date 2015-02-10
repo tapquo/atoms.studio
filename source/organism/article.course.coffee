@@ -11,6 +11,9 @@ class Atoms.Organism.Chapter extends Atoms.Organism.Article
   constructor: ->
     super
     do @render
+    __.proxy("GET", "tutorials", null).then (error, result) ->
+      __.Entity.Tutorial.create tutorial for tutorial in result.tutorials
+
 
   # -- Children Bubble Events --------------------------------------------------
   onEditorChange: (editor) ->

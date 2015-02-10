@@ -6,7 +6,7 @@ __.proxy = (type, method, parameters = {}, background = false) ->
 
   token = if session? then session.token else null
   $.ajax
-    url         : "#{__.C.host}#{method}"
+    url         : "http://localhost:1337/#{method}"
     type        : type
     data        : parameters
     dataType    : 'json'
