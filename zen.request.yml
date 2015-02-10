@@ -13,45 +13,43 @@ tutorials:
     title      : Sesión
     readme     : assets/documentation/1-1.md
     yaml       : >
-      id: chapters
-      style: active
+      id: session
       children:
         - Organism.Section:
+            style: centered padding
+            id: main
             children:
-              - Molecule.Navigation:
-                  children:
-                    - Atom.Button:
-                        icon: menu
-                        callbacks:
-                          - onMenu
-              - Molecule.Navigation:
+              - Molecule.Form:
                   events:
-                    - select
-                  callbacks:
-                    - onChapter
+                    - submit
                   children:
+                    - Atom.Input:
+                        type: text
+                        name: mail
+                        placeholder: E-mail...
+                        style: align center big
+                    - Atom.Input:
+                        type: password
+                        name: password
+                        placeholder: Your password...
+                        style: align center big
                     - Atom.Button:
-                        text: 1
+                        events:
+                          - touch
+                        style: fluid  theme big
+                        text: Log in
                     - Atom.Button:
-                        text: 2
-                    - Atom.Button:
-                        text: 3
-                    - Atom.Button:
-                        text: 4
-                    - Atom.Button:
-                        text: 5
-                    - Atom.Button:
-                        text: 6
-                    - Atom.Button:
-                        text: 7
-                    - Atom.Button:
-                        text: 8
-                    - Atom.Button:
-                        text: 9
-                    - Atom.Button:
-                        text: 10
+                        events:
+                          - touch
+                        style: fluid big
+                        text: "I'm not a member"
+              - Molecule.Div:
+                  children:
+                    - Atom.Link:
+                        text: Remember my password
+                        href: /remember
     code       : >
-      {"id":"chapters","style":"active","children":[{"Organism.Section":{"children":[{"Molecule.Navigation":{"children":[{"Atom.Button":{"icon":"menu","callbacks":["onMenu"]}}]}},{"Molecule.Navigation":{"events":["select"],"callbacks":["onChapter"],"children":[{"Atom.Button":{"text":1}},{"Atom.Button":{"text":2}},{"Atom.Button":{"text":3}},{"Atom.Button":{"text":4}},{"Atom.Button":{"text":5}},{"Atom.Button":{"text":6}},{"Atom.Button":{"text":7}},{"Atom.Button":{"text":8}},{"Atom.Button":{"text":9}},{"Atom.Button":{"text":10}}]}}]}}]}
+      {"id":"session","children":[{"Organism.Section":{"style":"centered padding","id":"main","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.Input":{"type":"text","name":"mail","placeholder":"E-mail...","style":"align center big"}},{"Atom.Input":{"type":"password","name":"password","placeholder":"Your password...","style":"align center big"}},{"Atom.Button":{"events":["touch"],"style":"fluid  theme big","text":"Log in"}},{"Atom.Button":{"events":["touch"],"style":"fluid big","text":"I'm not a member"}}]}},{"Molecule.Div":{"children":[{"Atom.Link":{"text":"Remember my password","href":"/remember"}}]}}]}}]}
 
   - chapter    : 2
     subchapter : 2.1
