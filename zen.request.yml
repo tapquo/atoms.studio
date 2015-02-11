@@ -66,7 +66,7 @@ tutorials:
                   events:
                     - submit
                   children:
-                    - Atom.label:
+                    - Atom.Label:
                         value: Personal Information
                         style: margin-bottom
                     - Atom.Input:
@@ -131,7 +131,7 @@ tutorials:
                         icon: trash
                         text: Cancel
     code       : >
-      {"id":"form","children":[{"Organism.Section":{"style":"padding","id":"info","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.label":{"value":"Personal Information","style":"margin-bottom"}},{"Atom.Input":{"type":"text","placeholder":"Your name...","style":"big"}},{"Atom.Input":{"type":"number","name":"phone","placeholder":"Your phone number...","required":"true","style":"big"}},{"Atom.Textarea":{"name":"address","placeholder":"Your address...","style":"small"}},{"Atom.Label":{"value":"Allergies","style":"margin-bottom"}},{"Atom.Select":{"name":"allergies","options":[{"label":"select...","value":0},{"label":"Pollen","value":1},{"label":"Dust Mite","value":2},{"label":"Mold","value":3}]}},{"Atom.Label":{"value":"Doctor"}},{"Atom.AutoComplete":{"placeholder":"Name...","name":"doctor","options":[{"label":"Zaldua","value":1},{"label":"Espinosa","value":2},{"label":"Sainz","value":3},{"label":"Perfecto","value":4},{"label":"Allen","value":4}]}},{"Atom.Label":{"value":"Birth"}},{"Atom.Input":{"type":"date","name":"birth"}},{"Atom.Button":{"events":["touch"],"style":"big accept fluid","icon":"diskette","text":"Save"}},{"Atom.Button":{"events":["touch"],"style":"big cancel fluid","icon":"trash","text":"Cancel"}}]}}]}}]}
+      {"id":"form","children":[{"Organism.Section":{"style":"padding","id":"info","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.Label":{"value":"Personal Information","style":"margin-bottom"}},{"Atom.Input":{"type":"text","placeholder":"Your name...","style":"big"}},{"Atom.Input":{"type":"number","name":"phone","placeholder":"Your phone number...","required":"true","style":"big"}},{"Atom.Textarea":{"name":"address","placeholder":"Your address...","style":"small"}},{"Atom.Label":{"value":"Allergies","style":"margin-bottom"}},{"Atom.Select":{"name":"allergies","options":[{"label":"select...","value":0},{"label":"Pollen","value":1},{"label":"Dust Mite","value":2},{"label":"Mold","value":3}]}},{"Atom.Label":{"value":"Doctor"}},{"Atom.AutoComplete":{"placeholder":"Name...","name":"doctor","options":[{"label":"Zaldua","value":1},{"label":"Espinosa","value":2},{"label":"Sainz","value":3},{"label":"Perfecto","value":4},{"label":"Allen","value":4}]}},{"Atom.Label":{"value":"Birth"}},{"Atom.Input":{"type":"date","name":"birth"}},{"Atom.Button":{"events":["touch"],"style":"big accept fluid","icon":"diskette","text":"Save"}},{"Atom.Button":{"events":["touch"],"style":"big cancel fluid","icon":"trash","text":"Cancel"}}]}}]}}]}
 
   - chapter    : 3
     subchapter : 3.1

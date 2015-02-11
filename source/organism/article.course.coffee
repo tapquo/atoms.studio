@@ -11,13 +11,19 @@ class Atoms.Organism.Chapter extends Atoms.Organism.Article
   constructor: ->
     super
     do @render
-    __.proxy("GET", "tutorials", null).then (error, result) ->
-      __.Entity.Tutorial.create tutorial for tutorial in result.tutorials
+    unless __.Entity.Tutorial.all().length isnt 0
+      __.proxy("GET", "tutorials", null).then (error, result) ->
+        __.Entity.Tutorial.create tutorial for tutorial in result.tutorials
 
 
   # -- Children Bubble Events --------------------------------------------------
   onEditorChange: (editor) ->
     @section.canvas.app.value editor.value()
+
+  chapter: (index) ->
+    chapter = __.Entity.Tutorial.findBy "chapter", index
+    @section.editor.value chapter.yaml
+    @section.canvas.app.value chapter.code
 
   onEditorError: ->
     console.log "onEditorError"

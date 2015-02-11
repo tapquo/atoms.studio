@@ -14,7 +14,6 @@ class Atoms.Atom.App extends Atoms.Class.Atom
     @view.render()
 
   value: (attributes) =>
-    console.log attributes
     try
       @view.refresh attributes
     catch e

@@ -9,6 +9,6 @@ class Atoms.Organism.AsideChapters extends Atoms.Organism.Aside
     do @render
 
   onChapter: (event, atom) ->
-    console.log "CHAPTER.#{atom.attributes.text}"
+    __.Article.Chapter.chapter atom.attributes.text
 
 new Atoms.Organism.AsideChapters()
