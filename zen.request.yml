@@ -11,7 +11,7 @@ tutorials:
   - chapter    : 2
     subchapter : 2.1
     title      : Sesión
-    readme     : assets/documentation/1-1.md
+    readme     : /www/assets/documentation/1-1.md
     yaml       : >
       id: session
       children:
@@ -54,7 +54,7 @@ tutorials:
   - chapter    : 3
     subchapter : 3.1
     title      : Formularios
-    readme     : assets/documentation/2-1.md
+    readme     : /www/assets/documentation/2-1.md
     yaml       : >
       id: form
       children:
@@ -136,7 +136,7 @@ tutorials:
   - chapter    : 4
     subchapter : 4.1
     title      : Listas
-    readme     : assets/documentation/3-1.md
+    readme     : /www/assets/documentation/3-1.md
     yaml       : >
       children:
         - Organism.Header:
@@ -197,7 +197,7 @@ tutorials:
   - chapter    : 5
     subchapter : 5.1
     title      : Aside
-    readme     : assets/documentation/4-1.md
+    readme     : /www/assets/documentation/4-1.md
     yaml       : >
       method: prepend
       id: options

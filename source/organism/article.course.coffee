@@ -24,6 +24,7 @@ class Atoms.Organism.Chapter extends Atoms.Organism.Article
     chapter = __.Entity.Tutorial.findBy "chapter", index
     @section.editor.value chapter.yaml
     @section.canvas.app.value chapter.code
+    $.get chapter.readme, (text) => @section.doc.md.refresh value: text
 
   onEditorError: ->
     console.log "onEditorError"
