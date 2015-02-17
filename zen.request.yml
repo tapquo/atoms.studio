@@ -8,15 +8,15 @@ tests:
 
 # -- Tutorial ------------------------------------------------------------------
 tutorials:
-  - chapter    : 1
-    subchapter : 1.1
+  - chapter    : 2
+    subchapter : 2.1
     title      : Sesión
     readme     : assets/documentation/1-1.md
     yaml       : >
       id: session
       children:
         - Organism.Section:
-            style: centered padding
+            style: centered padding active
             id: main
             children:
               - Molecule.Form:
@@ -49,17 +49,17 @@ tutorials:
                         text: Remember my password
                         href: /remember
     code       : >
-      {"id":"session","children":[{"Organism.Section":{"style":"centered padding","id":"main","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.Input":{"type":"text","name":"mail","placeholder":"E-mail...","style":"align center big"}},{"Atom.Input":{"type":"password","name":"password","placeholder":"Your password...","style":"align center big"}},{"Atom.Button":{"events":["touch"],"style":"fluid  theme big","text":"Log in"}},{"Atom.Button":{"events":["touch"],"style":"fluid big","text":"I'm not a member"}}]}},{"Molecule.Div":{"children":[{"Atom.Link":{"text":"Remember my password","href":"/remember"}}]}}]}}]}
+      {"id":"session","children":[{"Organism.Section":{"style":"centered padding active","id":"main","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.Input":{"type":"text","name":"mail","placeholder":"E-mail...","style":"align center big"}},{"Atom.Input":{"type":"password","name":"password","placeholder":"Your password...","style":"align center big"}},{"Atom.Button":{"events":["touch"],"style":"fluid  theme big","text":"Log in"}},{"Atom.Button":{"events":["touch"],"style":"fluid big","text":"I'm not a member"}}]}},{"Molecule.Div":{"children":[{"Atom.Link":{"text":"Remember my password","href":"/remember"}}]}}]}}]}
 
-  - chapter    : 2
-    subchapter : 2.1
+  - chapter    : 3
+    subchapter : 3.1
     title      : Formularios
     readme     : assets/documentation/2-1.md
     yaml       : >
       id: form
       children:
         - Organism.Section:
-            style: padding
+            style: padding active
             id: info
             children:
               - Molecule.Form:
@@ -131,10 +131,10 @@ tutorials:
                         icon: trash
                         text: Cancel
     code       : >
-      {"id":"form","children":[{"Organism.Section":{"style":"padding","id":"info","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.Label":{"value":"Personal Information","style":"margin-bottom"}},{"Atom.Input":{"type":"text","placeholder":"Your name...","style":"big"}},{"Atom.Input":{"type":"number","name":"phone","placeholder":"Your phone number...","required":"true","style":"big"}},{"Atom.Textarea":{"name":"address","placeholder":"Your address...","style":"small"}},{"Atom.Label":{"value":"Allergies","style":"margin-bottom"}},{"Atom.Select":{"name":"allergies","options":[{"label":"select...","value":0},{"label":"Pollen","value":1},{"label":"Dust Mite","value":2},{"label":"Mold","value":3}]}},{"Atom.Label":{"value":"Doctor"}},{"Atom.AutoComplete":{"placeholder":"Name...","name":"doctor","options":[{"label":"Zaldua","value":1},{"label":"Espinosa","value":2},{"label":"Sainz","value":3},{"label":"Perfecto","value":4},{"label":"Allen","value":4}]}},{"Atom.Label":{"value":"Birth"}},{"Atom.Input":{"type":"date","name":"birth"}},{"Atom.Button":{"events":["touch"],"style":"big accept fluid","icon":"diskette","text":"Save"}},{"Atom.Button":{"events":["touch"],"style":"big cancel fluid","icon":"trash","text":"Cancel"}}]}}]}}]}
+      {"id":"form","children":[{"Organism.Section":{"style":"padding active","id":"info","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.Label":{"value":"Personal Information","style":"margin-bottom"}},{"Atom.Input":{"type":"text","placeholder":"Your name...","style":"big"}},{"Atom.Input":{"type":"number","name":"phone","placeholder":"Your phone number...","required":"true","style":"big"}},{"Atom.Textarea":{"name":"address","placeholder":"Your address...","style":"small"}},{"Atom.Label":{"value":"Allergies","style":"margin-bottom"}},{"Atom.Select":{"name":"allergies","options":[{"label":"select...","value":0},{"label":"Pollen","value":1},{"label":"Dust Mite","value":2},{"label":"Mold","value":3}]}},{"Atom.Label":{"value":"Doctor"}},{"Atom.AutoComplete":{"placeholder":"Name...","name":"doctor","options":[{"label":"Zaldua","value":1},{"label":"Espinosa","value":2},{"label":"Sainz","value":3},{"label":"Perfecto","value":4},{"label":"Allen","value":4}]}},{"Atom.Label":{"value":"Birth"}},{"Atom.Input":{"type":"date","name":"birth"}},{"Atom.Button":{"events":["touch"],"style":"big accept fluid","icon":"diskette","text":"Save"}},{"Atom.Button":{"events":["touch"],"style":"big cancel fluid","icon":"trash","text":"Cancel"}}]}}]}}]}
 
-  - chapter    : 3
-    subchapter : 3.1
+  - chapter    : 4
+    subchapter : 4.1
     title      : Listas
     readme     : assets/documentation/3-1.md
     yaml       : >
@@ -194,8 +194,8 @@ tutorials:
     code       : >
       {"children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Listas"}}]}},{"Organism.Section":{"children":[{"Molecule.Search":{"children":[],"events":["submit"],"style":"margin-top\n"}},{"Molecule.List":{"children":[{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/06072011134639_ageratum-houstonianum-blue-194172.jpg","description":"Hay que plantarla a pleno sol, aunque en climas calurosos también puede estar en semisombra. ","text":"Agerato celestino","info":"0°C"}},{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_002.jpg","text":"Calendaria 'Millas","description":"Planta anual. Precisa riego moderado.. Mes de floración: VI-VIII","info":"< -1°C"}},{"Atom.Li":{"text":"Cresta de gallo","image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_017.jpg","description":"Planta anual. Precisa riego moderado. Mes de floración: V-IX","info":"0°C"}},{"Atom.Li":{"description":"Necesita un lugar a pleno sol y un suelo neutro, rico y húmedo, pero con buen drenaje.","image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/01092011133929_helianthus-annuus-abendsonne-14002115.jpg","text":"Girasol","info":"< -1°C"}}],"style":"margin-top"}},{"Molecule.Div":{"children":[{"Atom.Label":{"value":"Plantas del mes"}}]}},{"Molecule.List":{"children":[{"Atom.Li":{"text":"Aurinia saxatilis","description":"Cestillo de oro"}},{"Atom.Li":{"text":"Camellia japonica","description":"Arbusto o arbolillo de flores grandes"}}],"bind":{}}}],"id":"list","style":"active"}}],"id":"main"}
 
-  - chapter    : 4
-    subchapter : 4.1
+  - chapter    : 5
+    subchapter : 5.1
     title      : Aside
     readme     : assets/documentation/4-1.md
     yaml       : >
