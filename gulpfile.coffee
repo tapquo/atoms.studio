@@ -118,3 +118,4 @@ gulp.task "default", ->
   gulp.watch source.coffee, ["coffee"]
   gulp.watch source.stylus, ["stylus"]
   gulp.watch source.yml, ["yml"]
+  gulp.watch source.md, ["md"]

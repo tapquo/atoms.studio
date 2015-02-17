@@ -22,6 +22,7 @@ class Atoms.Organism.Chapter extends Atoms.Organism.Article
 
   chapter: (index) ->
     chapter = __.Entity.Tutorial.findBy "chapter", index
+    @header.title.refresh value: chapter.title
     @section.editor.value chapter.yaml
     @section.canvas.app.value chapter.code
     $.get chapter.readme, (text) =>

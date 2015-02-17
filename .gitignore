@@ -4,5 +4,6 @@ node_modules
 www/assets/css/*.css
 www/assets/js/*.js
 www/assets/scaffold/*
+www/assets/documentation/html/*
 environment/development.yml
 zen.error.json
