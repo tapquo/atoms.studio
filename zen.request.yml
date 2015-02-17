@@ -138,7 +138,6 @@ tutorials:
     title      : Listas
     readme     : assets/documentation/3-1.md
     yaml       : >
-      id: main
       children:
         - Organism.Header:
             children:
@@ -146,12 +145,13 @@ tutorials:
                   size: h1
                   value: Listas
         - Organism.Section:
-            id: list
             children:
               - Molecule.Search:
-                  style: "margin-top"
+                  children: []
+                  events:
+                    - submit
+                  style: "margin-top\n"
               - Molecule.List:
-                  style: margin-top
                   children:
                     - Atom.Li:
                         image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/06072011134639_ageratum-houstonianum-blue-194172.jpg"
@@ -173,6 +173,7 @@ tutorials:
                         image: "http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/01092011133929_helianthus-annuus-abendsonne-14002115.jpg"
                         text: Girasol
                         info: < -1°C
+                  style: margin-top
               - Molecule.Div:
                   children:
                     - Atom.Label:
@@ -185,14 +186,13 @@ tutorials:
                     - Atom.Li:
                         text: Camellia japonica
                         description: Arbusto o arbolillo de flores grandes
-                  bind:
-                    entity: __.Entity.Flowers
-                    atom   : Atom.Li
-                    create : true
-                    update : true
-                    destroy: true
+                  bind: {}
+            id: list
+            style: active
+      id: main
+
     code       : >
-      {"id":"main","children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Listas"}}]}},{"Organism.Section":{"id":"list","children":[{"Molecule.Search":{"style":"margin-top"}},{"Molecule.List":{"style":"margin-top","children":[{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/06072011134639_ageratum-houstonianum-blue-194172.jpg","description":"Hay que plantarla a pleno sol, aunque en climas calurosos también puede estar en semisombra. ","text":"Agerato celestino","info":"0°C"}},{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_002.jpg","text":"Calendaria 'Millas","description":"Planta anual. Precisa riego moderado.. Mes de floración: VI-VIII","info":"< -1°C"}},{"Atom.Li":{"text":"Cresta de gallo","image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_017.jpg","description":"Planta anual. Precisa riego moderado. Mes de floración: V-IX","info":"0°C"}},{"Atom.Li":{"description":"Necesita un lugar a pleno sol y un suelo neutro, rico y húmedo, pero con buen drenaje.","image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/01092011133929_helianthus-annuus-abendsonne-14002115.jpg","text":"Girasol","info":"< -1°C"}}]}},{"Molecule.Div":{"children":[{"Atom.Label":{"value":"Plantas del mes"}}]}},{"Molecule.List":{"children":[{"Atom.Li":{"text":"Aurinia saxatilis","description":"Cestillo de oro"}},{"Atom.Li":{"text":"Camellia japonica","description":"Arbusto o arbolillo de flores grandes"}}],"bind":{"entity":"__.Entity.Flowers","atom":"Atom.Li","create":true,"update":true,"destroy":true}}}]}}]}
+      {"children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Listas"}}]}},{"Organism.Section":{"children":[{"Molecule.Search":{"children":[],"events":["submit"],"style":"margin-top\n"}},{"Molecule.List":{"children":[{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/06072011134639_ageratum-houstonianum-blue-194172.jpg","description":"Hay que plantarla a pleno sol, aunque en climas calurosos también puede estar en semisombra. ","text":"Agerato celestino","info":"0°C"}},{"Atom.Li":{"image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_002.jpg","text":"Calendaria 'Millas","description":"Planta anual. Precisa riego moderado.. Mes de floración: VI-VIII","info":"< -1°C"}},{"Atom.Li":{"text":"Cresta de gallo","image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/TEM_017.jpg","description":"Planta anual. Precisa riego moderado. Mes de floración: V-IX","info":"0°C"}},{"Atom.Li":{"description":"Necesita un lugar a pleno sol y un suelo neutro, rico y húmedo, pero con buen drenaje.","image":"http://www.guiaverde.com/inc/thumb.php?filename=../files/plant/01092011133929_helianthus-annuus-abendsonne-14002115.jpg","text":"Girasol","info":"< -1°C"}}],"style":"margin-top"}},{"Molecule.Div":{"children":[{"Atom.Label":{"value":"Plantas del mes"}}]}},{"Molecule.List":{"children":[{"Atom.Li":{"text":"Aurinia saxatilis","description":"Cestillo de oro"}},{"Atom.Li":{"text":"Camellia japonica","description":"Arbusto o arbolillo de flores grandes"}}],"bind":{}}}],"id":"list","style":"active"}}],"id":"main"}
 
   - chapter    : 4
     subchapter : 4.1
