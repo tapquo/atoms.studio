@@ -1,15 +1,16 @@
 'use strict'
 
-gulp    = require 'gulp'
-coffee  = require 'gulp-coffee'
-concat  = require 'gulp-concat'
-connect = require 'gulp-connect'
-header  = require 'gulp-header'
-uglify  = require 'gulp-uglify'
-gutil   = require 'gulp-util'
-stylus  = require 'gulp-stylus'
-yml     = require 'gulp-yml'
-pkg     = require './package.json'
+coffee    = require 'gulp-coffee'
+concat    = require 'gulp-concat'
+connect   = require 'gulp-connect'
+gulp      = require 'gulp'
+gutil     = require 'gulp-util'
+header    = require 'gulp-header'
+markdown  = require 'gulp-markdown'
+pkg       = require './package.json'
+stylus    = require 'gulp-stylus'
+uglify    = require 'gulp-uglify'
+yml       = require 'gulp-yml'
 
 path =
   assets: "./www/assets"
@@ -25,6 +26,8 @@ source =
     "source/style/*.styl"]
   yml: [
     "source/organism/*.yml"]
+  md: [
+    "www/assets/documentation/md/*.md"]
 
 dependencies =
   atoms:
@@ -103,7 +106,12 @@ gulp.task "stylus", ->
     .pipe gulp.dest "#{path.assets}/css"
     .pipe connect.reload()
 
-gulp.task "init", ["dependencies", "coffee", "stylus", "yml"]
+gulp.task "md", ->
+  gulp.src source.md
+    .pipe markdown()
+    .pipe gulp.dest "#{path.assets}/documentation/html"
+
+gulp.task "init", ["dependencies", "coffee", "stylus", "yml", "md"]
 
 gulp.task "default", ->
   gulp.run ["webserver"]
