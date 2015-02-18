@@ -13,8 +13,6 @@ tutorials:
     title      : Bienvenidos a Atoms.js
     readme     : /www/assets/documentation/html/1-1.html
     yaml       : >
-      id: course
-      style: active
       children:
         - Organism.Header:
             id: header
@@ -36,9 +34,10 @@ tutorials:
                   style: fluid big
                   text: accept
                   icon: user
+      style: active
 
     code       : >
-      {"id":"session","children":[{"Organism.Section":{"style":"centered padding active","id":"main","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.Input":{"type":"text","name":"mail","placeholder":"E-mail...","style":"align center big"}},{"Atom.Input":{"type":"password","name":"password","placeholder":"Your password...","style":"align center big"}},{"Atom.Button":{"events":["touch"],"style":"fluid  theme big","text":"Log in"}},{"Atom.Button":{"events":["touch"],"style":"fluid big","text":"I'm not a member"}}]}},{"Molecule.Div":{"children":[{"Atom.Link":{"text":"Remember my password","href":"/remember"}}]}}]}}]}
+      {"id":"course","children":[{"Organism.Header":{"id":"header","children":[{"Atom.Heading":{"id":"title","style":"left","value":"1. Title Chapter"}}]}},{"Organism.Section":{"id":"section","style":"active padding","children":[{"Molecule.Div":{"id":"doc","children":[{"Atom.Text":{"value":"Welcome to Learn Atoms.js."}}]}},{"Atom.Button":{"style":"fluid big","text":"accept","icon":"user"}}]}}],"style":"active"}
 
 
   - chapter    : 2
