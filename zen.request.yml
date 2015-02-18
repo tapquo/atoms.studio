@@ -11,7 +11,7 @@ tutorials:
   - chapter    : 2
     subchapter : 2.1
     title      : Sesión
-    readme     : /www/assets/documentation/1-1.md
+    readme     : /www/assets/documentation/html/1-1.html
     yaml       : >
       id: session
       children:
@@ -54,7 +54,7 @@ tutorials:
   - chapter    : 3
     subchapter : 3.1
     title      : Formularios
-    readme     : /www/assets/documentation/2-1.md
+    readme     : /www/assets/documentation/html/2-1.html
     yaml       : >
       id: form
       children:
@@ -136,7 +136,7 @@ tutorials:
   - chapter    : 4
     subchapter : 4.1
     title      : Listas
-    readme     : /www/assets/documentation/3-1.md
+    readme     : /www/assets/documentation/html/3-1.html
     yaml       : >
       children:
         - Organism.Header:
@@ -196,42 +196,54 @@ tutorials:
 
   - chapter    : 5
     subchapter : 5.1
-    title      : Aside
-    readme     : /www/assets/documentation/4-1.md
+    title      : Details
+    readme     : /www/assets/documentation/html/5-1.html
     yaml       : >
-      method: prepend
-      id: options
-      children:
-        - Organism.Header:
-            children:
-              - Atom.Heading:
-                  size: h1
-                  value: Options
-        - Organism.Section:
-            id: menu
-            style: padding
-            children:
-              - Molecule.Navigation:
-                  children:
-                    - Atom.Link:
-                        icon: home
-                        text: Home
-                    - Atom.Link:
-                        text: " Planta bulbosa"
-                        icon: star
-                        info: "143"
-                    - Atom.Link:
-                        text: Planta de temporada
-                        icon: like
-                        info: "135"
-                    - Atom.Link:
-                        text: Plantas del mes
-                    - Atom.Link:
-                        text: Plantas más vistas
-                    - Atom.Button:
-                        events:
-                          - touch
-                        style: fluid
-                        text: Comprar
+        children:
+          - Organism.Header:
+              children:
+                - Atom.Heading:
+                    size: h1
+                    value: Camellia Japonica
+                - Molecule.Navigation:
+                    style: left
+                    children:
+                      - Atom.Button:
+                          events:
+                            - touch
+                          icon: angle-left
+          - Organism.Section:
+              id: details
+              style: active
+              children:
+                - Atom.Figure:
+                    style: big
+                    url: "http://stephendanko.com/blog/wp-content/uploads/2009/04/Camellia-Covina.jpg"
+                - Molecule.Div:
+                    id: extra
+                    style: margin-all
+                    children:
+                      - Atom.Heading:
+                          size: h1
+                          value: Camellia japonica
+                      - Atom.Label:
+                          value: "Famila: Theaceae"
+                      - Atom.Text:
+                          value: "Es un arbusto floral o un árbol pequeño, nativo de Japón, Corea, China.1 En la zona central de Chile, la ciudad de Bulnes es conocida como la ciudad de las Camelias."
+                          style: tiny margin-top margin-bottom
+                      - Atom.Video:
+                          src: "http://youtu.be/HqwAWG6_FI4"
+                          controls: true
+                          preload: true
+                          autoplay: true
+                - Molecule.Navigation:
+                    children:
+                      - Atom.Button:
+                          events:
+                            - touch
+                          text: Order
+                          style: theme
+        id: main
+
     code       : >
-      {"children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Options"}}]}},{"Organism.Section":{"children":[{"Molecule.Navigation":{"children":[{"Atom.Link":{"icon":"home","text":"Home"}},{"Atom.Link":{"text":" Planta bulbosa","icon":"star","info":"143"}},{"Atom.Link":{"text":"Planta de temporada","icon":"like","info":"135"}},{"Atom.Link":{"text":"Plantas del mes"}},{"Atom.Link":{"text":"Plantas más vistas"}},{"Atom.Button":{"events":["touch"],"style":"fluid","text":"Comprar"}}]}}],"id":"menu","style":"padding"}}],"method":"prepend","id":"options"}
+        {"id":"main","children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Camellia Japonica"}},{"Molecule.Navigation":{"style":"left","children":[{"Atom.Button":{"events":["touch"],"icon":"angle-left"}}]}}]}},{"Organism.Section":{"id":"details","style":"active","children":[{"Atom.Figure":{"style":"big","url":"http://stephendanko.com/blog/wp-content/uploads/2009/04/Camellia-Covina.jpg"}},{"Molecule.Div":{"id":"extra","style":"margin-all","children":[{"Atom.Heading":{"size":"h1","value":"Camellia japonica"}},{"Atom.Label":{"value":"Famila: Theaceae"}},{"Atom.Text":{"value":"Es un arbusto floral o un árbol pequeño, nativo de Japón, Corea, China.1 En la zona central de Chile, la ciudad de Bulnes es conocida como la ciudad de las Camelias.","style":"tiny margin-top margin-bottom"}},{"Atom.Video":{"src":"http://youtu.be/HqwAWG6_FI4","controls":true,"preload":true,"autoplay":true}}]}},{"Molecule.Navigation":{"children":[{"Atom.Button":{"events":["touch"],"text":"Order","style":"theme"}}]}}]}}]}
