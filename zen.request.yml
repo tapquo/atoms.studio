@@ -11,7 +11,7 @@ tutorials:
   - chapter    : 2
     subchapter : 2.1
     title      : Sesión
-    readme     : /www/assets/documentation/html/1-1.html
+    readme     : /www/assets/documentation/html/2-1.html
     yaml       : >
       id: session
       children:
@@ -54,7 +54,7 @@ tutorials:
   - chapter    : 3
     subchapter : 3.1
     title      : Formularios
-    readme     : /www/assets/documentation/html/2-1.html
+    readme     : /www/assets/documentation/html/3-1.html
     yaml       : >
       id: form
       children:
@@ -136,7 +136,7 @@ tutorials:
   - chapter    : 4
     subchapter : 4.1
     title      : Listas
-    readme     : /www/assets/documentation/html/3-1.html
+    readme     : /www/assets/documentation/html/4-1.html
     yaml       : >
       children:
         - Organism.Header:
@@ -196,7 +196,7 @@ tutorials:
 
   - chapter    : 5
     subchapter : 5.1
-    title      : Details
+    title      : Detalles de un elemento
     readme     : /www/assets/documentation/html/5-1.html
     yaml       : >
         children:
