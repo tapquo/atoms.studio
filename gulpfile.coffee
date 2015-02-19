@@ -36,10 +36,12 @@ dependencies =
       "bower_components/js-yaml/dist/js-yaml.min.js"
       "bower_components/hope/hope.js"
       "bower_components/atoms/atoms.js"
-      "bower_components/atoms/atoms.app.js"]
+      "bower_components/atoms/atoms.app.js"
+      "bower_components/atoms-app-carousel/atoms.app.carousel.js"]
     css: [
       "bower_components/atoms/atoms.app.css"
-      "bower_components/atoms.icons/atoms.icons.css"]
+      "bower_components/atoms.icons/atoms.icons.css"
+      "bower_components/atoms-app-carousel/atoms.app.carousel.css"]
   codemirror:
     js: [
       "bower_components/codemirror/lib/codemirror.js"

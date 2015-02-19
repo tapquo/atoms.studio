@@ -326,3 +326,27 @@ tutorials:
 
     code       : >
         {"id":"main","children":[{"Organism.Section":{"id":"add","style":"padding active","children":[{"Atom.Figure":{"url":"http://kidztrainer.com/server13/photos/78wQM2keLj653M~/55027_baby-kids-faces-expressions-1920x1200-wallpaper_2560x1600.jpg","style":"fluid big"}},{"Atom.Text":{"value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","style":"small"}}]}},{"Organism.Section":{"id":"like","style":"padding","children":[{"Atom.Figure":{"url":"http://www.acatclinic.us/wp-content/uploads/2013/08/Pretty-Cat-With-Beautiful-Green-Eyes-Picture-HD-Wallpaper.jpg","style":"big"}}]}},{"Organism.Footer":{"children":[{"Molecule.Navigation":{"children":[{"Atom.Button":{"icon":"add-user","path":"main/add","events":["touch"]}},{"Atom.Button":{"icon":"like2","count":"14","path":"main/like","events":["touch"]}},{"Atom.Button":{"icon":"refresh","events":["touch"]}}]}}]}}]}
+
+  - chapter    : 7
+    subchapter : 7.1
+    title      : Carousel
+    readme     : /www/assets/documentation/html/7-1.html
+    yaml       : >
+      children:
+        - Organism.Section:
+            id: photos
+            style: active
+            children:
+              - Molecule.Carousel:
+                  children:
+                    - Atom.Figure:
+                        url: "http://lorempixel.com/500/700/animals/"
+                    - Atom.Figure:
+                        url: "http://lorempixel.com/500/700/animals/"
+                    - Atom.Figure:
+                        url: "http://lorempixel.com/500/700/animals/"
+                  style: big
+      id: main
+
+    code       : >
+        {"children":[{"Organism.Section":{"id":"photos","style":"active","children":[{"Molecule.Carousel":{"children":[{"Atom.Figure":{"url":"http://lorempixel.com/500/700/animals/"}},{"Atom.Figure":{"url":"http://lorempixel.com/500/700/animals/"}},{"Atom.Figure":{"url":"http://lorempixel.com/500/700/animals/"}}],"style":"big"}}]}}],"id":"main"}
