@@ -353,7 +353,7 @@ tutorials:
 
   - chapter    : 8
     subchapter : 8.1
-    title      : Carousel
+    title      : Gmap y Calendario
     readme     : /www/assets/documentation/html/8-1.html
     yaml       : >
       children:
@@ -363,7 +363,32 @@ tutorials:
             children:
               - Atom.GMap:
                   style: big
+              - Molecule.Calendar:
+                  children: []
+                  months:
+                    - January
+                    - February
+                    - March
+                    - April
+                    - May
+                    - June
+                    - July
+                    - August
+                    - September
+                    - October
+                    - November
+                    - December
+                  days:
+                    - Mon
+                    - Tue
+                    - Wed
+                    - Thu
+                    - Fri
+                    - Sat
+                    - Sun
       id: main
 
+
+
     code       : >
-        {"children":[{"Organism.Section":{"id":"gmap","style":"active","children":[{"Atom.GMap":{"style":"big"}}]}}],"id":"main"}
+        {"children":[{"Organism.Section":{"id":"gmap","style":"active","children":[{"Atom.GMap":{"style":"big"}},{"Molecule.Calendar":{"children":[],"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"days":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]}}]}}],"id":"main"}

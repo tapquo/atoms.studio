@@ -38,12 +38,14 @@ dependencies =
       "bower_components/atoms/atoms.js"
       "bower_components/atoms/atoms.app.js"
       "bower_components/atoms-app-carousel/atoms.app.carousel.js"
-      "bower_components/atoms-app-gmaps/atoms.app.gmaps.js"]
+      "bower_components/atoms-app-gmaps/atoms.app.gmaps.js"
+      "bower_components/atoms-app-calendar/atoms.app.calendar.js"]
     css: [
       "bower_components/atoms/atoms.app.css"
       "bower_components/atoms.icons/atoms.icons.css"
       "bower_components/atoms-app-carousel/atoms.app.carousel.css"
-      "bower_components/atoms-app-gmaps/atoms.app.gmaps.css"]
+      "bower_components/atoms-app-gmaps/atoms.app.gmaps.css"
+      "bower_components/atoms-app-calendar/atoms.app.calendar.css"]
   codemirror:
     js: [
       "bower_components/codemirror/lib/codemirror.js"
