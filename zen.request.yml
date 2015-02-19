@@ -45,7 +45,6 @@ tutorials:
     title      : Sesión
     readme     : /www/assets/documentation/html/2-1.html
     yaml       : >
-      id: session
       children:
         - Organism.Section:
             style: centered padding active
@@ -80,6 +79,7 @@ tutorials:
                     - Atom.Link:
                         text: Remember my password
                         href: /remember
+      id: session
     code       : >
       {"id":"session","children":[{"Organism.Section":{"style":"centered padding active","id":"main","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.Input":{"type":"text","name":"mail","placeholder":"E-mail...","style":"align center big"}},{"Atom.Input":{"type":"password","name":"password","placeholder":"Your password...","style":"align center big"}},{"Atom.Button":{"events":["touch"],"style":"fluid  theme big","text":"Log in"}},{"Atom.Button":{"events":["touch"],"style":"fluid big","text":"I'm not a member"}}]}},{"Molecule.Div":{"children":[{"Atom.Link":{"text":"Remember my password","href":"/remember"}}]}}]}}]}
 
@@ -88,7 +88,6 @@ tutorials:
     title      : Formularios
     readme     : /www/assets/documentation/html/3-1.html
     yaml       : >
-      id: form
       children:
         - Organism.Section:
             style: padding active
@@ -162,6 +161,7 @@ tutorials:
                         style: big cancel fluid
                         icon: trash
                         text: Cancel
+      id: form
     code       : >
       {"id":"form","children":[{"Organism.Section":{"style":"padding active","id":"info","children":[{"Molecule.Form":{"events":["submit"],"children":[{"Atom.Label":{"value":"Personal Information","style":"margin-bottom"}},{"Atom.Input":{"type":"text","placeholder":"Your name...","style":"big"}},{"Atom.Input":{"type":"number","name":"phone","placeholder":"Your phone number...","required":"true","style":"big"}},{"Atom.Textarea":{"name":"address","placeholder":"Your address...","style":"small"}},{"Atom.Label":{"value":"Allergies","style":"margin-bottom"}},{"Atom.Select":{"name":"allergies","options":[{"label":"select...","value":0},{"label":"Pollen","value":1},{"label":"Dust Mite","value":2},{"label":"Mold","value":3}]}},{"Atom.Label":{"value":"Doctor"}},{"Atom.AutoComplete":{"placeholder":"Name...","name":"doctor","options":[{"label":"Zaldua","value":1},{"label":"Espinosa","value":2},{"label":"Sainz","value":3},{"label":"Perfecto","value":4},{"label":"Allen","value":4}]}},{"Atom.Label":{"value":"Birth"}},{"Atom.Input":{"type":"date","name":"birth"}},{"Atom.Button":{"events":["touch"],"style":"big accept fluid","icon":"diskette","text":"Save"}},{"Atom.Button":{"events":["touch"],"style":"big cancel fluid","icon":"trash","text":"Cancel"}}]}}]}}]}
 
@@ -279,3 +279,50 @@ tutorials:
 
     code       : >
         {"id":"main","children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Camellia Japonica"}},{"Molecule.Navigation":{"style":"left","children":[{"Atom.Button":{"events":["touch"],"icon":"angle-left"}}]}}]}},{"Organism.Section":{"id":"details","style":"active","children":[{"Atom.Figure":{"style":"big","url":"http://stephendanko.com/blog/wp-content/uploads/2009/04/Camellia-Covina.jpg"}},{"Molecule.Div":{"id":"extra","style":"margin-all","children":[{"Atom.Heading":{"size":"h1","value":"Camellia japonica"}},{"Atom.Label":{"value":"Famila: Theaceae"}},{"Atom.Text":{"value":"Es un arbusto floral o un árbol pequeño, nativo de Japón, Corea, China.1 En la zona central de Chile, la ciudad de Bulnes es conocida como la ciudad de las Camelias.","style":"tiny margin-top margin-bottom"}},{"Atom.Video":{"src":"http://youtu.be/HqwAWG6_FI4","controls":true,"preload":true,"autoplay":true}}]}},{"Molecule.Navigation":{"children":[{"Atom.Button":{"events":["touch"],"text":"Order","style":"theme"}}]}}]}}]}
+
+  - chapter    : 6
+    subchapter : 6.1
+    title      : Footer
+    readme     : /www/assets/documentation/html/6-1.html
+    yaml       : >
+      children:
+        - Organism.Section:
+            id: add
+            style: padding
+            children:
+              - Atom.Figure:
+                  url: "http://kidztrainer.com/server13/photos/78wQM2keLj653M~/55027_baby-kids-faces-expressions-1920x1200-wallpaper_2560x1600.jpg"
+                  style: fluid big
+              - Atom.Text:
+                  value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                  style: small
+        - Organism.Section:
+            id: like
+            style: padding
+            children:
+              - Atom.Figure:
+                  url: "http://www.acatclinic.us/wp-content/uploads/2013/08/Pretty-Cat-With-Beautiful-Green-Eyes-Picture-HD-Wallpaper.jpg"
+                  style: big
+        - Organism.Footer:
+            children:
+              - Molecule.Navigation:
+                  children:
+                    - Atom.Button:
+                        icon: add-user
+                        path: main/add
+                        events:
+                          - touch
+                    - Atom.Button:
+                        icon: like2
+                        count: "14"
+                        path: main/like
+                        events:
+                          - touch
+                    - Atom.Button:
+                        icon: refresh
+                        events:
+                          - touch
+      id: main
+
+    code       : >
+        {"id":"main","children":[{"Organism.Section":{"id":"add","style":"padding active","children":[{"Atom.Figure":{"url":"http://kidztrainer.com/server13/photos/78wQM2keLj653M~/55027_baby-kids-faces-expressions-1920x1200-wallpaper_2560x1600.jpg","style":"fluid big"}},{"Atom.Text":{"value":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.","style":"small"}}]}},{"Organism.Section":{"id":"like","style":"padding","children":[{"Atom.Figure":{"url":"http://www.acatclinic.us/wp-content/uploads/2013/08/Pretty-Cat-With-Beautiful-Green-Eyes-Picture-HD-Wallpaper.jpg","style":"big"}}]}},{"Organism.Footer":{"children":[{"Molecule.Navigation":{"children":[{"Atom.Button":{"icon":"add-user","path":"main/add","events":["touch"]}},{"Atom.Button":{"icon":"like2","count":"14","path":"main/like","events":["touch"]}},{"Atom.Button":{"icon":"refresh","events":["touch"]}}]}}]}}]}
