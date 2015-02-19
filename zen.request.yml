@@ -350,3 +350,20 @@ tutorials:
 
     code       : >
         {"children":[{"Organism.Section":{"id":"photos","style":"active","children":[{"Molecule.Carousel":{"children":[{"Atom.Figure":{"url":"http://lorempixel.com/500/700/animals/"}},{"Atom.Figure":{"url":"http://lorempixel.com/500/700/animals/"}},{"Atom.Figure":{"url":"http://lorempixel.com/500/700/animals/"}}],"style":"big"}}]}}],"id":"main"}
+
+  - chapter    : 8
+    subchapter : 8.1
+    title      : Carousel
+    readme     : /www/assets/documentation/html/8-1.html
+    yaml       : >
+      children:
+        - Organism.Section:
+            id: gmap
+            style: active
+            children:
+              - Atom.GMap:
+                  style: big
+      id: main
+
+    code       : >
+        {"children":[{"Organism.Section":{"id":"gmap","style":"active","children":[{"Atom.GMap":{"style":"big"}}]}}],"id":"main"}
