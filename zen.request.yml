@@ -8,6 +8,29 @@ tests:
 
 # -- Tutorial ------------------------------------------------------------------
 tutorials:
+  - chapter    : 0
+    subchapter : 0
+    title      : Wellcome to Learn Atoms.js
+    readme     : /www/assets/documentation/html/0.html
+    yaml       : >
+      children:
+        - Organism.Section:
+            id: example
+            style: padding active
+            children:
+              - Atom.Heading:
+                  size: h1
+                  value: Welcome to learn Atoms.js
+              - Atom.Button:
+                  text: START
+                  style: fluid accept
+                  events:
+                    - touch
+      id: main
+
+    code       : >
+      {"children":[{"Organism.Section":{"id":"example","style":"padding active","children":[{"Atom.Heading":{"size":"h1","value":"Welcome to learn Atoms.js"}},{"Atom.Button":{"events":["touch"],"text":"START","style":"fluid accept"}}]}}],"id":"main"}
+
   - chapter    : 1
     subchapter : 1.1
     title      : Bienvenidos a Atoms.js

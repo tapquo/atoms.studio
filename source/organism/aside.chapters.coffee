@@ -8,6 +8,9 @@ class Atoms.Organism.AsideChapters extends Atoms.Organism.Aside
     super
     do @render
 
+  onMenu: ->
+    __.Article.Chapter.chapter 0
+
   onChapter: (event, atom) ->
     __.Article.Chapter.chapter atom.attributes.text
 
