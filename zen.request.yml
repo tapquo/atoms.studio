@@ -357,8 +357,13 @@ tutorials:
     readme     : /www/assets/documentation/html/8-1.html
     yaml       : >
       children:
+        - Organism.Header:
+            children:
+              - Atom.Heading:
+                  size: h1
+                  value: Organiza tu viaje
         - Organism.Section:
-            id: gmap
+            id: travel
             style: active
             children:
               - Atom.GMap:
@@ -388,7 +393,5 @@ tutorials:
                     - Sun
       id: main
 
-
-
     code       : >
-        {"children":[{"Organism.Section":{"id":"gmap","style":"active","children":[{"Atom.GMap":{"style":"big"}},{"Molecule.Calendar":{"children":[],"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"days":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]}}]}}],"id":"main"}
+        {"children":[{"Organism.Header":{"children":[{"Atom.Heading":{"size":"h1","value":"Organiza tu viaje"}}]}},{"Organism.Section":{"style":"active","children":[{"Atom.GMap":{"style":"big"}},{"Molecule.Calendar":{"children":[],"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"days":["Mon","Tue","Wed","Thu","Fri","Sat","Sun"]}}],"id":"travel"}}],"id":"main"}
