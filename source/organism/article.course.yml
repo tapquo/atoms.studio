@@ -9,12 +9,18 @@ children:
             style: left
             value: Wellcome to Learn Atoms.js
         - Molecule.Navigation:
+            id: nav
             style: right
             children:
               - Atom.Button:
                   text: Reset
               - Atom.Button:
                   text: Run
+              - Atom.Button:
+                  id: language
+                  text: English
+                  callbacks:
+                    - onEnglish
 
         - Molecule.Navigation:
             style: right

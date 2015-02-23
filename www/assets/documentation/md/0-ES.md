@@ -1,0 +1,1 @@
+Bienvenido a "Aprende Atoms.js". Se trata de un conjunto de tutoriales interactivos que puedes realizarlos en cualquier momento siendo tú quien marca el ritmo de aprendizaje. Cada tutorial está compuesto por una serie de pasos muy fáciles de seguir. El primero de ellos se llama "¡Hola mundo!".
