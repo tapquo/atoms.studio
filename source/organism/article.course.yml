@@ -7,7 +7,7 @@ children:
         - Atom.Heading:
             id: title
             style: left
-            value: Wellcome to Learn Atoms.js
+            value: Welcome to Learn Atoms.js
         - Molecule.Navigation:
             id: nav
             style: right

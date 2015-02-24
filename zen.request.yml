@@ -10,7 +10,7 @@ tests:
 tutorials:
   - chapter    : 0
     subchapter : 0
-    title      : Wellcome to Learn Atoms.js
+    title      : Bienvenidos a Aprende Atoms.js
     readme     : /www/assets/documentation/html/0.html
     yaml       : >
       children:
@@ -305,7 +305,7 @@ tutorials:
 
   - chapter    : 6
     subchapter : 6.1
-    title      : Footer
+    title      : Pie de página
     readme     : /www/assets/documentation/html/6-1.html
     yaml       : >
       children:
@@ -352,7 +352,7 @@ tutorials:
 
   - chapter    : 7
     subchapter : 7.1
-    title      : Carousel
+    title      : Carrusel
     readme     : /www/assets/documentation/html/7-1.html
     yaml       : >
       children:

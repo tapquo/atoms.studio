@@ -38,6 +38,8 @@ class Atoms.Organism.Chapter extends Atoms.Organism.Article
     @header.title.refresh value: chapter.title
     @section.editor.value chapter.yaml
     @section.canvas.app.value chapter.code
+    if localStorage.getItem("atoms.studio") is "EN"
+      @header.title.refresh value: __.C["chapter_#{chapter.chapter}"]
     readme = "#{chapter.readme.split(".html")[0]}-#{localStorage.getItem("atoms.studio")}.html"
     $.get readme, (text) =>
       document.getElementById("doc").innerHTML = text
