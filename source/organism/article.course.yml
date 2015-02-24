@@ -7,7 +7,7 @@ children:
         - Atom.Heading:
             id: title
             style: left
-            value: Welcome to Learn Atoms.js
+            value: Bienvenido a Aprende Atoms.js
         - Molecule.Navigation:
             id: nav
             style: right
@@ -38,7 +38,7 @@ children:
             children:
               - Atom.Text:
                   id: md
-                  value: Welcome to Learn Atoms.js. This is a set of interactive tutorials which you can take at your own pace. Each tutorial consists of a number of steps – you're currently on step 1 of the 'Hello world!' tutorial.
+                  value: Bienvenido a Aprende Atoms.js. Son un conjunto de tutoriales interactivos los cuales puedes ir realizándolos cuando te apetezca.
         - Atom.Editor:
             id: editor
             events:

@@ -13,6 +13,8 @@ class Atoms.Organism.Chapter extends Atoms.Organism.Article
     do @render
     if localStorage.getItem("atoms.studio") is "EN"
       @header.nav.language.refresh text: "Español"
+      @header.title.refresh value: __.C.chapter_0
+      @section.doc.md.refresh value: __.C.md_0
     else
       @header.nav.language.refresh text: "English"
     unless __.Entity.Tutorial.all().length isnt 0
